@@ -80,13 +80,13 @@ const Food = () => {
               </button>
               <button
                 className="text-orange-600 border-orange-600 border rounded-xl p-1  hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`$$`)}
+                onClick={() => filterPrice(`$$$`)}
               >
                 $$$
               </button>
               <button
                 className="text-orange-600 border-orange-600 border rounded-xl p-1 hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`$$$$filterPrice`)}
+                onClick={() => filterPrice(`$$$$`)}
               >
                 $$$$
               </button>
