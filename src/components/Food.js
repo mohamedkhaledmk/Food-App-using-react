@@ -68,27 +68,27 @@ const Food = () => {
             <div className=" flex gap-3 justify-between">
               <button
                 className="text-orange-600 border-orange-600 border rounded-xl p-1 hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`$`)}
+                onClick={() => filterPrice(`100 $`)}
               >
-                $
+                100 $
               </button>
               <button
                 className="text-orange-600 border-orange-600 rounded-xl p-1 border hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`$$`)}
+                onClick={() => filterPrice(`200 $`)}
               >
-                $$
+                200 $
               </button>
               <button
                 className="text-orange-600 border-orange-600 border rounded-xl p-1  hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`$$$`)}
+                onClick={() => filterPrice(`300 $`)}
               >
-                $$$
+                300 $
               </button>
               <button
                 className="text-orange-600 border-orange-600 border rounded-xl p-1 hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`$$$$`)}
+                onClick={() => filterPrice(`400 $`)}
               >
-                $$$$
+                400 $
               </button>
             </div>
           </div>
