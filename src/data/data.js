@@ -52,7 +52,7 @@ export const data = [
     name: "Meat Lovers",
     category: "pizza",
     image:
-      "https://images.unsplash.com/photo-16288400 $42765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1542574271-7f3b92e6c821?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "400 $",
   },
   {
