@@ -3,7 +3,7 @@ import { data } from "../data/data";
 import { useState } from "react";
 const Food = () => {
   const [foods, setFoods] = useState(data);
-
+  const [filteredPrice, setFilteredPrice] = useState("");
   const filterType = (category) => {
     setFoods(
       data.filter((item) => {
@@ -13,11 +13,19 @@ const Food = () => {
   };
 
   const filterPrice = (price) => {
-    setFoods(
-      data.filter((item) => {
-        return item.price === price;
-      })
-    );
+    if (filteredPrice != price) {
+      console.log(filteredPrice);
+      setFilteredPrice(price);
+      console.log(price);
+      setFoods(
+        data.filter((item) => {
+          return item.price === price;
+        })
+      );
+    } else {
+      setFilteredPrice("");
+      setFoods(data);
+    }
   };
   return (
     <div>
@@ -67,26 +75,34 @@ const Food = () => {
             <p className="font-bold text-gray-700 my-2">Filter Price</p>
             <div className=" flex gap-3 justify-between">
               <button
-                className="text-orange-600 border-orange-600 border rounded-xl p-1 hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`100 $`)}
+                className={`text-orange-600 border-orange-600 ${
+                  filteredPrice == `100` ? `text-white bg-orange-600` : ``
+                }  border rounded-xl p-1 hover:bg-orange-600 hover:text-white`}
+                onClick={() => filterPrice(`100`)}
               >
                 100 $
               </button>
               <button
-                className="text-orange-600 border-orange-600 rounded-xl p-1 border hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`200 $`)}
+                className={`text-orange-600 border-orange-600 ${
+                  filteredPrice == `200` ? `text-white bg-orange-600` : ``
+                }  border rounded-xl p-1 hover:bg-orange-600 hover:text-white`}
+                onClick={() => filterPrice(`200`)}
               >
                 200 $
               </button>
               <button
-                className="text-orange-600 border-orange-600 border rounded-xl p-1  hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`300 $`)}
+                className={`text-orange-600 border-orange-600 ${
+                  filteredPrice == `300` ? `text-white bg-orange-600` : ``
+                }  border rounded-xl p-1 hover:bg-orange-600 hover:text-white`}
+                onClick={() => filterPrice(`300`)}
               >
                 300 $
               </button>
               <button
-                className="text-orange-600 border-orange-600 border rounded-xl p-1 hover:bg-orange-600 hover:text-white"
-                onClick={() => filterPrice(`400 $`)}
+                className={`text-orange-600 border-orange-600 ${
+                  filteredPrice == `400` ? `text-white bg-orange-600` : ``
+                }  border rounded-xl p-1 hover:bg-orange-600 hover:text-white`}
+                onClick={() => filterPrice(`400`)}
               >
                 400 $
               </button>
@@ -109,7 +125,7 @@ const Food = () => {
             <div className="flex justify-between px-2 py-2">
               <h1 className="font-poppins">{sandwich.name}</h1>
               <p className="bg-orange-600 text-white rounded-full p-1">
-                {sandwich.price}
+                {sandwich.price} $
               </p>
             </div>
           </div>
